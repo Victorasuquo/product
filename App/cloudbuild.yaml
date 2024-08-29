@@ -1,0 +1,10 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        export DOCKER_BUILDKIT=1
+        docker build -t gcr.io/product-433913/drowsy .
+images:
+  - 'gcr.io/product-433913/drowsy'
